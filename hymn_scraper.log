@@ -1,0 +1,16 @@
+2025-02-18 14:38:56,606 - INFO - Program started.
+2025-02-18 14:38:56,606 - INFO - Running Chrome in headless mode (no GUI)
+2025-02-18 14:38:57,974 - INFO - WebDriver initialized with the Service
+2025-02-18 14:38:57,975 - INFO - Saving hymns to JSON dictionary...
+2025-02-18 14:38:57,976 - INFO - Converting hymn to dictionary...
+2025-02-18 14:38:57,977 - INFO - Scraping started.
+2025-02-18 14:38:57,979 - INFO - Fetching URL: https://www.churchofjesuschrist.org/media/music/collections/hymns?lang=eng
+2025-02-18 14:39:01,040 - INFO - Successfully scraped 341 hymns from https://www.churchofjesuschrist.org/media/music/collections/hymns?lang=eng
+2025-02-18 14:39:03,906 - INFO - Fetching URL: https://www.churchofjesuschrist.org/media/music/collections/hymns-for-home-and-church?lang=eng
+2025-02-18 14:39:05,448 - INFO - Successfully scraped 37 hymns from https://www.churchofjesuschrist.org/media/music/collections/hymns-for-home-and-church?lang=eng
+2025-02-18 14:39:05,786 - INFO - Scraping finished. Closing WebDriver...
+2025-02-18 14:39:07,967 - INFO - WebDriver closed.
+2025-02-18 14:39:07,967 - INFO - Scraping complete. Total hymns found: 378
+2025-02-18 14:39:07,969 - INFO - Conversion complete. Total hymns: 378
+2025-02-18 14:39:07,973 - INFO - Hymn data successfully saved to hymns.json
+2025-02-18 14:39:07,974 - INFO - Program completed successfully.
