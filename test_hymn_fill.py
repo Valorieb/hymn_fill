@@ -54,7 +54,7 @@ class TestHymnScraper(unittest.TestCase):
 
         save_hymns_to_json()
 
-                # Check that json.dump was called with the correct arguments
+        # Assert that json.dump was called with the correct arguments
         mock_json_dump.assert_called_once_with(
             {
                 "1": "The Morning Breaks",
@@ -62,12 +62,19 @@ class TestHymnScraper(unittest.TestCase):
                 "302": "I Know My Father Lives",
                 "1017": "This Is the Christ"
             },
-            unittest.mock.ANY,  # The file handler, you don't need to check it in this case
+            unittest.mock.ANY,  # The file handler
             indent=4
         )
 
-        # Check if mock_get_hymn_dict was called
+        # Assert that get_hymn_dict was called once
         mock_get_hymn_dict.assert_called_once()
+
+        # Ensure the number of hymns in the saved dictionary matches the expected count
+        self.assertEqual(len(mock_get_hymn_dict.return_value), 4)
+
+        # Verify that a specific key-value pair exists in the dictionary
+        self.assertIn("302", mock_get_hymn_dict.return_value)
+        self.assertEqual(mock_get_hymn_dict.return_value["302"], "I Know My Father Lives")
 
 if __name__ == "__main__":
     unittest.main()
